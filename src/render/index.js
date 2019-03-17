@@ -1,9 +1,10 @@
+import { TEXT_ELEMENT } from '../constants';
 import isListener from './isListener';
 import isAttribute from './isAttribute';
 
 export default function render(element, parentDom) {
   const { type, props } = element;
-  const isTextElement = type === 'TEXT ELEMENT';
+  const isTextElement = type === TEXT_ELEMENT;
   const dom = isTextElement
     ? document.createTextNode('')
     : document.createElement(type);
