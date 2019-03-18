@@ -2,6 +2,6 @@
 	"tabWidth": 2,
 	"singleQuote": true,
 	"trailingComma": "all",
-	"arrowParens": "always"
-	bracketSpacing: true
+	"arrowParens": "always",
+	"bracketSpacing": true
 }
