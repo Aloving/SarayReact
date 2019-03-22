@@ -1,7 +1,7 @@
 import isListener from './utils/isListener';
 import isAttribute from './utils/isAttribute';
 
-export default function updateDomProperties(dom, prevProps, nextProps) {
+export default function updateDomProperties(dom, prevProps = {}, nextProps = {}) {
   // Remove event listeners
   Object.keys(prevProps)
     .filter(isListener)

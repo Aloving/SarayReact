@@ -1,15 +1,19 @@
 import isListener from './utils/isListener';
 import isAttribute from './utils/isAttribute';
+import updateDomProperties from './updateDomProperties';
+
 import { TEXT_ELEMENT } from './constants';
 
-function instantiate(element) {
-  const { type, props } = element;
+export default function instantiate(element) {
+  const { type, props = {} } = element;
 
   // Create DOM element
   const isTextElement = type === TEXT_ELEMENT;
   const dom = isTextElement
     ? document.createTextNode('')
     : document.createElement(type);
+
+  updateDomProperties(dom, [], props);
 
   // Add event listeners
   Object.keys(props)
